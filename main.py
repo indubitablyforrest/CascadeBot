@@ -1,11 +1,10 @@
 from dotenv import load_dotenv
 import os
-
-load_dotenv() # take environment variables from .env
-
 import discord
 from discord.ext import commands
 import cascadefun
+
+load_dotenv()  # take environment variables from .env
 
 
 def run():
@@ -50,6 +49,7 @@ def run():
         await ctx.send("you are a mod!")
 
     bot.run(os.getenv("API_Key"))  # add token here
+
 
 if __name__ == '__main__':
     # run the bot
