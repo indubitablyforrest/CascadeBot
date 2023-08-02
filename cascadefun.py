@@ -29,10 +29,10 @@ def cascade_resolved() -> str:
 
         #---------the following cases order is important to keep the odds accurate. it executes in order so the second case in the list excludes any cases (values) precceding it.-----------------
         case _ if surprise_factor <= 5: #5% chance
-            return 'Ope, last copy is in your hand XD'
+            return 'you flipped ' + num + ' cards with no legal target. Ope, last copy is in your hand XD'
 
         case _ if surprise_factor <= 10: #5% chance
-            return "guess you didn't side in the 4th copy"
+            return 'you flipped ' + num + " cards with no legal target. Guess you didn't side in the 4th copy"
 
         case _ if surprise_factor <=14: #4% chance cmc < 3
             return alternate_cascade((random.choice(initiate_list)),num) + 'You should check out #living-end-initates'
